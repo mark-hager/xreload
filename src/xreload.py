@@ -112,8 +112,8 @@ def _extract_code(mod):
         else:
             print(f"Error: Could not find a valid spec for {mod.__name__}")
             return None
-    except Exception as e:
-        print(f"Error extracting code for module {mod.__name__}: {e}")
+    except Exception as error: # pylint: disable=broad-exception-caught
+        print(f"Error extracting code for module {mod.__name__}: {error}")
         return None
 
 
